@@ -19,8 +19,8 @@
             <div id="thumbnails">
                 <img v-for="(image, index) in images" :class="{'active': index === currentImage}" :alt="images.text" :src="image.image"
                      :class="{'active' ? 'ms-2' : '' }" > 
-                <i class="fa-solid fa-chevron-left" @click="prevImage"></i>
-                <i class="fa-solid fa-chevron-right" @click="nextImage"></i>
+                <i class="fa-solid fa-circle-arrow-up" @click="prevImage"></i>
+                <i class="fa-solid fa-circle-arrow-down" @click="nextImage"></i>
             </div>
         </div>
     </div>

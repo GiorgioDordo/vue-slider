@@ -7,7 +7,6 @@ body {
 .main-slider {
     max-width: 1400px;
     height: 650px;
-    background-color: rgb(3, 39, 70);
     padding: 0;
 }
 
@@ -53,19 +52,19 @@ img {
     filter: brightness(100%);
 }
 
-.fa-chevron-left, .fa-chevron-right {
+.fa-solid {
     position: absolute;
     left: 50%;
-    transform: translateY(-50%);
+    transform: translateX(-50%);
     font-size: 2rem;
     color: white;
     cursor: pointer;
 }
 
-.fa-chevron-left {
+.fa-circle-arrow-up {
     top: 0;
 }
 
-.fa-chevron-right {
+.fa-circle-arrow-down {
     bottom: 0;
 }
