@@ -11,13 +11,15 @@
 <body class="d-flex align-items-center" id="app">
     <div class="container main-slider d-flex ">
         <div class="main-slider">
-            <div id="carousel" >
-                <img v-for="(image, index) in images" :alt="images.text" :src="image.image" :class="{'active': index === currentImage}">
+            <div id="carousel">
+                <img v-for="(image, index) in images" :alt="image.text" :src="image.image" :class="{'active': index === currentImage}">
+                <h2 class="text-white">{{images[currentImage].title}}</h2>
+                <p class="text-white">{{images[currentImage].text}}</p>
             </div>
         </div>
         <div class="mini-slider">
             <div id="thumbnails">
-                <img v-for="(image, index) in images" :class="{'active': index === currentImage}" :alt="images.text" :src="image.image"
+                <img v-for="(image, index) in images" :class="{'active': index === currentImage}" :alt="image.text" :src="image.image"
                      :class="{'active' ? 'ms-2' : '' }" > 
                 <i class="fa-solid fa-circle-arrow-up" @click="prevImage"></i>
                 <i class="fa-solid fa-circle-arrow-down" @click="nextImage"></i>
